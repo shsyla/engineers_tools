@@ -10,7 +10,7 @@ def gauss_solve( A, b ):
     x= bwd_subs(A,b)    
     return x
 
-def bwd_subs( U, y ):
+def backward_substitution( U, y ):
     n=len(y)
     x=np.zeros(n)
     #ab null wird angefangen zu zaehlen
@@ -21,7 +21,7 @@ def bwd_subs( U, y ):
             sum+=U[i][j]*x[j]
         x[i]= (y[i]-sum)/U[i][i]    
     return x
-def fwd_subs( L, b ):
+def forward_substitution( L, b ):
     y=np.zeros(len(b))
     y[0]=b[0]/L[0][0]
     for i in range(1,len(b)):
