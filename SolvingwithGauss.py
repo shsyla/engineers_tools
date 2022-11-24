@@ -7,7 +7,7 @@ def gauss_solve( A, b ):
             for j in range(i,Anzahl):
                 A[z][j]=A[z][j]-A[i][j]*factor  
             b[z]= b[z]-factor*b[i]                     
-    x= bwd_subs(A,b)    
+    x= backward_substitution(A,b)    
     return x
 
 def backward_substitution( U, y ):
